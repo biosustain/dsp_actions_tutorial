@@ -1,0 +1,15 @@
+# Hello World example for DTU biosustain and DTU bioengineering Data Club
+
+name: Hello World example
+
+on:
+  push:
+
+jobs:
+  say-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo hello world to biosustain
+      run: echo "Hello DTU biosustain!"
+    - name: echo hello world to bioengineering
+      run: echo "Hello DTU bioengineering!"
