@@ -30,7 +30,7 @@ jobs:
       run: |
         pip install cowpy
     - name: run cowpy
-      run: cowpy -c tux 'hi there'
+      run: cowpy -c tux hola
     - name: run script with examples
       run: |
         python bin/cowpy_examples.py
