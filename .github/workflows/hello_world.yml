@@ -4,6 +4,7 @@ name: Hello World example
 
 on:
   push:
+  pull_request:
 
 jobs:
   say-hello-world:
@@ -32,4 +33,4 @@ jobs:
       run: cowpy -c tux hi there
     - name: run script with examples
       run: |
-        python bin/cowpy.py
+        python bin/cowpy_examples.py
