@@ -32,7 +32,7 @@ jobs:
     - name: run cowpy
       run: |
        cowpy -c tux "hola mundo"
-       echo "my message" | cowpy
+       echo "hola mundo" | cowpy  -c tux 
     - name: run script with examples
       run: |
         python bin/cowpy_examples.py
