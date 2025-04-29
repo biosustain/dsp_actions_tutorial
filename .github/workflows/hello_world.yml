@@ -10,10 +10,12 @@ jobs:
   say-hello-world:
     runs-on: ubuntu-latest
     steps:
-    - name: echo hello world to biosustain
-      run: echo "Hello DTU biosustain!"
-    - name: echo hello world to bioengineering
-      run: echo "Hello DTU bioengineering!"
+    - name: biosustain
+      run: | 
+        echo "Hello DTU biosustain!"
+    - name: bioengineering
+      run: | 
+        echo "Hello DTU bioengineering!"
   cowsay-test:
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
     - name: install cowpy
       run: |
         pip install cowpy
