@@ -26,6 +26,9 @@ jobs:
       run: cowsay -c cheese -t  'hey there'
   cowpy-test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {}
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
@@ -36,7 +39,7 @@ jobs:
         pip install cowpy
     - name: run cowpy
       run: |
-       cowpy -c tux "hola mundo"
+       cowpy -c tux hola mundo
        echo "hola mundo" | cowpy  -c tux 
     - name: run script with examples
       run: |
