@@ -35,6 +35,24 @@ Location: building 208 – room 002 (ALC3)
 
 A simple example of a GitHub Action workflow that run command line commands.
 
+## Exercises
+
+1. Create a fork and open the fork in a GitHub Codespace
+2. Add two jobs which use either cowsay or cowpy
+    - Separate installation and usage into separate steps
+
+### Medium
+
+Call it from a script (to understand file structure). 
+- You will need the file (e.g. called `examples.py`)
+- Copy examples from [cowpy README.md](https://github.com/jeffbuttars/cowpy)
+
+### Advanced
+
+Build a directed acyclic graph combining jobs
+- Look at the extended examples' workflows below to figure this out
+
+
 
 ## Extended example
 
