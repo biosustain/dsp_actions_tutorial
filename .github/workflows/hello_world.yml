@@ -9,7 +9,7 @@ jobs:
   say-hello-world:
     runs-on: ubuntu-latest
     steps:
-    - name: echo hello world to biosustain
+    - name: biosustain
       run: echo "Hello DTU biosustain!"
-    - name: echo hello world to bioengineering
+    - name: bioengineering
       run: echo "Hello DTU bioengineering!"
