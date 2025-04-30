@@ -35,13 +35,39 @@ Location: building 208 – room 002 (ALC3)
 
 A simple example of a GitHub Action workflow that run command line commands.
 
+- see the [slides](tutorial_slides_2025-04-30.pdf)
+
 ## Exercises
+
+### Simple
+
+Starting with the basic exercise of executing something on the command line.
 
 1. Create a fork and open the fork in a GitHub Codespace
 2. Add two jobs which use either cowsay or cowpy
     - Separate installation and usage into separate steps
 
+```bash
+# first job
+## install step:
+pip install cowsay # install cowsay
+## usage step:
+cowsay -c cheese -t  'hey there' # use cowsay
+```
+and 
+```bash
+# second job
+# https://github.com/jeffbuttars/cowpy
+pip install cowpy # install cowpy
+
+cowpy -c tux hi there # use cowpy
+```
+
 ### Medium
+
+> Not all details are provided for the solution. 
+> It hopefully helps to build your own 
+> understanding of GitHub Actions.
 
 Call it from a script (to understand file structure). 
 - You will need the file (e.g. called `examples.py`)
@@ -50,6 +76,7 @@ Call it from a script (to understand file structure).
 ### Advanced
 
 Build a directed acyclic graph combining jobs
+
 - Look at the extended examples' workflows below to figure this out
 
 
