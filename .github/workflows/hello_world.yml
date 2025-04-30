@@ -42,6 +42,7 @@ jobs:
   run-api-examples-cowpy-from-readme:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout
     - name: install cowpy
       run: |
         pip install cowpy
