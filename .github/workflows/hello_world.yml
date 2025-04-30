@@ -34,13 +34,17 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
+    - name: run cowpy
+      run: |
+        pip install cowpy
+        cowpy -c tux hola mundo
+        echo "hola mundo" | cowpy  -c tux 
+  run-api-examples-cowpy-from-readme:
+    runs-on: ubuntu-latest
+    steps:
     - name: install cowpy
       run: |
         pip install cowpy
-    - name: run cowpy
-      run: |
-       cowpy -c tux hola mundo
-       echo "hola mundo" | cowpy  -c tux 
     - name: run script with examples
       run: |
         python bin/cowpy_examples.py
